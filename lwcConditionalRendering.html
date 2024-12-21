@@ -1,0 +1,43 @@
+<template>
+    <!--Below is the code for Toggle Switch-->
+    <div class="toggle">
+        <lightning-input type="toggle" label="On/Off" name="input1" onchange={handleChange}>
+        </lightning-input>
+    </div>
+    <!--Below is the template when Switch is True-->
+    <template if:true={isvisible}>
+        <!--Below code is to display moving road-->
+        <div class="road">
+            <img src={road} height="200%" width="500%">
+        </div>
+        <!--Below code is to display moving car-->
+        <div class="mycar">
+            <img src={car} height="400" width="400">
+        </div>
+        <!--Below code is to display moving wheel-->
+        <div class="wheel">
+            <img src={wheel} height="75" width="75" class="back-wheel">
+            <img src={wheel} height="75" width="75" class="front-wheel">
+        </div>
+    </template>
+    
+    <!--Below is the template when Switch is False-->
+    <template if:false={isvisible}>
+        <!--Below code is to display static road-->
+        <div class="roadfalse">
+            <img src={road} height="200%" width="500%">
+
+        </div>
+        <!--Below code is to display static car-->
+        <div class="mycarfalse">
+            <img src={car} height="400" width="400">
+        </div>
+
+
+        <!--Below code is to display static wheel-->
+        <div class="wheelfalse">
+            <img src={wheel} height="75" width="75" class="back-wheelfalse">
+            <img src={wheel} height="75" width="75" class="front-wheelfalse">
+        </div>
+    </template>
+</template>
